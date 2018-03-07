@@ -7,13 +7,13 @@ A GraphQL server built with Apollo server and AdonisJs
 Clone the project repository by running the command below if you use SSH
 
 ```bash
-git clone git@github.com:ammezie/adonis-graphql-server.git
+git clone https://github.com/omedale/graphql-server-apollo.git
 ```
 
 If you use https, use this instead
 
 ```bash
-git clone https://github.com/ammezie/adonis-graphql-server.git
+git clone https://github.com/omedale/graphql-server-apollo.git
 ```
 
 ## Setup
@@ -33,7 +33,7 @@ Duplicate `.env.example` and rename it `.env`
 Setup your database and enter the following in `.env`
 
 ```
-DB_CONNECTION=mysql
+DB_CONNECTION=pg
 DB_HOST=localhost
 DB_DATABASE=adonis_graphql_server
 DB_USER=root

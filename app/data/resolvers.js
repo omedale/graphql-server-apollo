@@ -40,8 +40,17 @@ const resolvers = {
     // Handles user login
     async login (_, { email, password }, { auth }) {
       const { token } = await auth.attempt(email, password)
+      const user = await User.findBy('email', email)
+      const data = {
+        token,
+        user: {
+          id: user.id,
+          username: user.username,
+          email: user.email
+        }
+      }
 
-      return token
+      return JSON.stringify(data)
     },
 
     // Create new user
